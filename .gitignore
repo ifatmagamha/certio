@@ -1,0 +1,6 @@
+data/raw/*
+data/processed/*
+exiobase/*
+!data/raw/.gitkeep
+!data/processed/.gitkeep
+!exiobase/.gitkeep

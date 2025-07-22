@@ -34,8 +34,8 @@ class AgribalyseExtractor(EmissionSource):
 
         # Mappage intelligent basé sur des mots-clés
         column_map = {
-            "element": ["sous-groupe"],
             "sector": ["groupe"],
+            "element": ["sous-groupe"],
             "product": ["lci name"],
             "EF": ["score unique ef"],
             "livraison": ["livraison"],
@@ -55,9 +55,11 @@ class AgribalyseExtractor(EmissionSource):
         df["element"] = df[find_col(column_map["element"])].astype(str).str.lower().str.strip()
         df["EF"] = df[find_col(column_map["EF"])]
         df["code"] = df[find_col(column_map["code"])]
+        df["delivery"] = df[find_col(column_map["livraison"])]
+        df["packaging"] = df[find_col(column_map["packaging"])]
         df["country"] = "fr"
         df["unit"] = "kgco2e/kg"
-        df["source"] = "agribalyse"
+        df["source"] = "agribalyse synthese v3.2"
 
         self.normalized_data = df[[
             "product", "sector", "element", "country", "EF", "unit", "source", "code"

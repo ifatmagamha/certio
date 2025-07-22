@@ -24,4 +24,4 @@ class EmissionSource(ABC):
         os.makedirs(output_dir, exist_ok=True)
         output_path = os.path.join(output_dir, f"{self.name.lower()}_normalized.parquet")
         self.normalized_data.to_parquet(output_path, index=False)
-        print(f"[Save done ! : {output_path}")
+        print(f"\n [Save done !]: {output_path}")

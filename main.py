@@ -30,6 +30,7 @@ print("[AGRIBALYSE étapes v3.2] Sample:")
 print(agribalyse_per_step_df.head())
 
 
+
 # ----- AGRIBALYSE ingrédients-----
 agribalyse_ingredients = AgribalyseIngredientsExtractor()
 agribalyse_ingredients.fetch_data()

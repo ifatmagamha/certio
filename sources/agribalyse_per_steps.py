@@ -49,12 +49,12 @@ class AgribalyseStepsExtractor(EmissionSource):
             "sector": ["groupe"],
             "element": ["sous-groupe"],
             "code": ["code_agb"],
-            "EF transport": ["transport"],
-            "EF raw_material": ["agriculture"],
-            "EF packaging": ["emballage"],
-            "EF processing": ["transformation"],
-            "EF distribution": ["distribution"],
-            "EF consumption": ["consommation"]
+            "EF transport": ["changement_climatique_-_transport"],
+            "EF raw_material": ["changement_climatique_-_agriculture"],
+            "EF packaging": ["changement_climatique_-_emballage"],
+            "EF processing": ["changement_climatique_-_transformation"],
+            "EF distribution": ["changement_climatique_-_supermarche_et_distribution"],
+            "EF consumption": ["changement_climatique_-_consommation"]
         }
 
         def find_col(keywords):
@@ -80,7 +80,7 @@ class AgribalyseStepsExtractor(EmissionSource):
         df["source"] = "agribalyse per step v3.1"
 
         self.normalized_data = df[[
-            "product", "sector", "element", "EF raw_material", "EF transport", "EF transformation", "EF packaging", "EF processing", "EF distribution", "EF consumption", "country", "unit", "source", "code"
+            "code", "product", "sector", "element", "EF raw_material", "EF transport", "EF transformation", "EF packaging", "EF processing", "EF distribution", "EF consumption", "country", "unit", "source"
         ]]
         print(f"[INFO] Normalized {len(self.normalized_data)} records.")
         return self.normalized_data

@@ -42,6 +42,8 @@ class AgribalyseIngredientsExtractor(EmissionSource):
         df = self.raw_data.copy()
         df.columns = [clean_str(col) for col in df.columns]
         print(f"[DEBUG] Colonnes : {df.columns.tolist()}")
+        print("\n processed columns :", df.columns.tolist())
+
 
         # Dictionnaire dynamique basé sur les noms possibles
         column_map = {
@@ -49,7 +51,7 @@ class AgribalyseIngredientsExtractor(EmissionSource):
             "ingredient": ["ingredients"],
             "sector": ["groupe"],
             "element": ["sous-groupe"],
-            "EF": ["score_unique_ef"],
+            "EF": ["changement_climatique"],
             "code": ["ciqual code", "ciqual__code"]
         }
 
@@ -71,7 +73,7 @@ class AgribalyseIngredientsExtractor(EmissionSource):
         df["source"] = "agribalyse ingredients v3.1"
 
         self.normalized_data = df[[
-            "product", "sector", "element", "ingredient", "country", "EF", "unit", "source", "code"
+            "code", "product", "sector", "element", "ingredient", "country", "EF", "unit", "source"
         ]]
         print(f"[INFO] Normalized {len(self.normalized_data)} records.")
         return self.normalized_data

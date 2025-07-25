@@ -37,7 +37,7 @@ class AgribalyseExtractor(EmissionSource):
             "sector": ["groupe"],
             "element": ["sous-groupe"],
             "product": ["lci name"],
-            "EF": ["score unique ef"],
+            "EF": ["changement climatique"],
             "livraison": ["livraison"],
             "packaging": ["approche emballage"],
             "code": ["code agb"]
@@ -62,7 +62,7 @@ class AgribalyseExtractor(EmissionSource):
         df["source"] = "agribalyse synthese v3.2"
 
         self.normalized_data = df[[
-            "product", "sector", "element", "country", "EF", "unit", "source", "code"
+            "code", "product", "sector", "element", "country", "delivery", "packaging", "EF", "unit", "source"
         ]]
 
         return self.normalized_data

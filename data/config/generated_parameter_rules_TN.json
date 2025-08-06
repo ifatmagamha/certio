@@ -1,0 +1,17 @@
+{
+  "kg/room-night": [
+    "number",
+    1,
+    null
+  ],
+  "kg/kg": [
+    "weight",
+    80,
+    "kg"
+  ],
+  "kg/kWh": [
+    "energy",
+    1000,
+    "kWh"
+  ]
+}

@@ -1,6 +1,7 @@
 venv/
 data/raw/*
 data/processed/*
+data/json/*
 exiobase/*
 !data/raw/.gitkeep
 !data/processed/.gitkeep

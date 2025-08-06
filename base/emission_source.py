@@ -25,3 +25,12 @@ class EmissionSource(ABC):
         output_path = os.path.join(output_dir, f"{self.name.lower()}_normalized.parquet")
         self.normalized_data.to_parquet(output_path, index=False)
         print(f"\n [Save done !]: {output_path}")
+
+    def save_to_csv(self, output_dir: str = "data/processed"):
+        """Saved data in .csv format"""
+        if self.normalized_data is None:
+            self.normalized_data = self.normalize()
+        os.makedirs(output_dir, exist_ok=True)
+        output_path = os.path.join(output_dir, f"{self.name.lower()}_normalized.csv")
+        self.normalized_data.to_csv(output_path, index=False)
+        print(f"\n [Save done !]: {output_path}")

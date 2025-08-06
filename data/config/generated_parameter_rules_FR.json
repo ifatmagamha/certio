@@ -1,0 +1,92 @@
+{
+  "kg/room-night": [
+    "number",
+    1,
+    null
+  ],
+  "kg/eur": [
+    "money",
+    1000,
+    "usd"
+  ],
+  "kg/m2": [
+    "unknown_param",
+    1,
+    null
+  ],
+  "kg/kg": [
+    "weight",
+    80,
+    "kg"
+  ],
+  "kg/m3": [
+    "unknown_param",
+    1,
+    null
+  ],
+  "kg/km": [
+    "distance",
+    100,
+    "km"
+  ],
+  "kg/CPU-hour": [
+    "unknown_param",
+    1,
+    null
+  ],
+  "kg/kWh": [
+    "energy",
+    1000,
+    "kWh"
+  ],
+  "kg/tonne-km": [
+    "distance",
+    100,
+    "km"
+  ],
+  "kg/l": [
+    "unknown_param",
+    1,
+    null
+  ],
+  "kg/GJ": [
+    "energy",
+    1000,
+    "kWh"
+  ],
+  "kg/toe": [
+    "energy",
+    1000,
+    "kWh"
+  ],
+  "kg/GB-hour": [
+    "unknown_param",
+    1,
+    null
+  ],
+  "kg/GB": [
+    "unknown_param",
+    1,
+    null
+  ],
+  "kg/tonne": [
+    "unknown_param",
+    1,
+    null
+  ],
+  "kg/passenger-km": [
+    "distance",
+    100,
+    "km"
+  ],
+  "kg/building": [
+    "unknown_param",
+    1,
+    null
+  ],
+  "kg/TB-hour": [
+    "unknown_param",
+    1,
+    null
+  ]
+}

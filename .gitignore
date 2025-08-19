@@ -6,3 +6,4 @@ exiobase/*
 !data/raw/.gitkeep
 !data/processed/.gitkeep
 !exiobase/.gitkeep
+logs/*

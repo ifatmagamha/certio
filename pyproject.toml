@@ -1,0 +1,15 @@
+[build-system]
+requires = ["setuptools", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "carbonjar"
+version = "0.1.0"
+description = "Airflow PIPLINE"
+authors = [{ name = "IFG" }]
+dependencies = [
+    "apache-airflow",
+    "psycopg2-binary",
+    "sqlalchemy",
+    "python-dotenv",
+]
